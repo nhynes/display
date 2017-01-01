@@ -85,7 +85,7 @@ function M.image(img, opts)
   img = normalize(img, opts)
 
   -- write to in-memory compressed JPG
-  local inmem_img = image.compressJPG(img)
+  local inmem_img = image.compressJPG(img, opts.quality)
   local imgdata = 'data:image/jpg;base64,' .. mime.b64(ffi.string(inmem_img:data(), inmem_img:nElement()))
 
   torch.setdefaulttensortype(defaultType)

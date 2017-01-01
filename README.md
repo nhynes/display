@@ -99,6 +99,8 @@ When displaying a list of images, the option `labels` can be used to put a small
 display.images({a, b, c, d}, {labels={'a', 'b', 'c', 'd'}})
 ```
 
+The `quality` option can be set to a number between 1 and 100 (default=75) to adjust the level of compression.
+
 Finally, the option `width` can be used to specify the initial size of the window in pixels.
 
 ### Plotting
