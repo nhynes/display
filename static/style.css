@@ -131,7 +131,11 @@ button:hover, a:hover {
 }
 
 .content-image {
-  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;          /* Firefox */
+  image-rendering: -o-crisp-edges;            /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;  /* IE */
 }
 
 .window-plot {
